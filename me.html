@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="ji">
+    <ul class="ha">
+        <li>Item</li>
+    </ul>
+
+<script>
+    var x = document.querySelector('.ji');
+    x.style.backgroundColor='black';
+    var c = document.querySelector('.ha');
+    c.style.color="white";
+    var a=document.createElement("li")
+    a.className='ha'
+    a.innerText="ki haal";
+    c.appendChild(a);
+
+    function addl(l){
+        var p=document.createElement("li")
+        p.innerText=`${l}`; 
+        c.appendChild(p);   
+    }
+
+    addl("ygutrftdx");
+    addl("uytfcrdxhn")
+
+
+    // optimised
+    function opti(l){
+        var p=document.createElement("li");
+        p.appendChild(document.createTextNode(l));
+        document.querySelector(".ha").appendChild(p);
+    }
+    opti("cutie")
+    const f=document.querySelector("li:nth-child(2)");
+    f.innerHTML="mokji";
+
+    // edit
+    const hihih=document.querySelector("li:nth-child(1)");
+    hihih.outerHTML='<li>type</li>'
+    // remove
+    const fy=document.querySelector('li:last-child');
+    fy.remove();
+
+</script>
+</body>
+</html>
